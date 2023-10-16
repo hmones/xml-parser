@@ -20,6 +20,7 @@ import javax.xml.xpath.XPathFactory
 class XmlDocument(content: ByteArray) {
     private var document: Document
     private val xpathInstance: XPath = XPathFactory.newInstance().newXPath()
+
     init {
         val builder = DocumentBuilderFactory.newInstance().newDocumentBuilder()
         document = builder.parse(ByteArrayInputStream(content))
@@ -103,6 +104,7 @@ class XmlDocument(content: ByteArray) {
 
     companion object {
         fun fromDocument(document: Document): XmlDocument = XmlDocument(documentToByteArray(document))
+
         fun documentToByteArray(document: Document): ByteArray {
             val output = ByteArrayOutputStream()
             val result = StreamResult(output)

@@ -5,7 +5,8 @@ import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class XmlDocumentTest {
-    val document = """
+    val document =
+        """
         <?xml version="1.0"?>
         <catalog>
            <book id="bk101">
@@ -28,7 +29,7 @@ class XmlDocumentTest {
               of the world.</description>
            </book>
         </catalog>
-    """.trimIndent()
+        """.trimIndent()
 
     @Test
     fun `it can extracts html code as string from a node`() {
