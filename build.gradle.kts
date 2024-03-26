@@ -4,7 +4,7 @@ plugins {
     kotlin("jvm") version "1.9.0"
     id("com.diffplug.spotless") version "6.22.0"
     id("jacoco")
-    id("org.sonarqube") version "4.4.1.3373"
+    id("org.sonarqube") version "5.0.0.4638"
     id("com.adarshr.test-logger") version "4.0.0"
     id("maven-publish")
 }
